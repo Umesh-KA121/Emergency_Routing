@@ -67,6 +67,50 @@
 
 ---
 
+## Week 2
+
+### GitHub
+- [x] Create GitHub repository
+- [x] Configure Git
+- [x] Add `.gitignore`
+- [x] Add MIT License
+- [x] Create README
+- [x] Create project directory structure
+- [x] Make initial commit
+- [x] Push project to GitHub
+
+### Frontend
+- [x] Initialize React + Vite
+- [x] Install frontend dependencies
+- [x] Configure Tailwind CSS
+- [x] Create frontend structure
+- [x] Verify development server
+
+### Backend
+- [x] Initialize FastAPI project
+- [x] Create Python virtual environment
+- [x] Install backend dependencies
+- [x] Create basic API
+- [x] Verify API server
+
+### Frontend ↔ Backend
+- [x] Configure Axios
+- [x] Configure CORS
+- [x] Connect React with FastAPI
+- [x] Implement health check API
+
+### Database
+- [ ] Install/configure PostgreSQL
+- [ ] Create project database
+- [ ] Establish backend-database connection
+- [ ] Create initial database structure
+
+### Documentation
+- [x] Create documentation structure
+- [x] Initial README
+- [x] Project progress tracker
+- [ ] Document Week 2 implementation
+
 # Phase 3 — DSA Core
 
 ## Week 3–4
