@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.database.connection import engine, Base
+from app.models import User, Emergency, Ambulance, Hospital, Route
 
 from app.database.connection import engine
 
@@ -8,6 +10,8 @@ app = FastAPI(
     description="Backend API for emergency response and ambulance routing system",
     version="0.1.0"
 )
+
+Base.metadata.create_all(bind=engine)
 
 app.add_middleware(
     CORSMiddleware,
