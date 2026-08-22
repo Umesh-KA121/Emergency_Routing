@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from sqlalchemy import ForeignKey, String, Text, DateTime
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database.connection import Base
 
@@ -9,13 +9,18 @@ from app.database.connection import Base
 class Emergency(Base):
     __tablename__ = "emergencies"
 
-    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    id: Mapped[int] = mapped_column(
+        primary_key=True,
+        index=True
+    )
 
     user_id: Mapped[int] = mapped_column(
         ForeignKey("users.id")
     )
 
-    description: Mapped[str] = mapped_column(Text)
+    description: Mapped[str] = mapped_column(
+        Text
+    )
 
     latitude: Mapped[float]
     longitude: Mapped[float]
@@ -33,4 +38,14 @@ class Emergency(Base):
     created_at: Mapped[datetime] = mapped_column(
         DateTime,
         default=datetime.utcnow
+    )
+
+    user = relationship(
+        "User",
+        back_populates="emergencies"
+    )
+
+    routes = relationship(
+        "Route",
+        back_populates="emergency"
     )

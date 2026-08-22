@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from sqlalchemy import ForeignKey, String, DateTime
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database.connection import Base
 
@@ -9,7 +9,10 @@ from app.database.connection import Base
 class Route(Base):
     __tablename__ = "routes"
 
-    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    id: Mapped[int] = mapped_column(
+        primary_key=True,
+        index=True
+    )
 
     emergency_id: Mapped[int] = mapped_column(
         ForeignKey("emergencies.id")
@@ -34,4 +37,19 @@ class Route(Base):
     created_at: Mapped[datetime] = mapped_column(
         DateTime,
         default=datetime.utcnow
+    )
+
+    emergency = relationship(
+        "Emergency",
+        back_populates="routes"
+    )
+
+    ambulance = relationship(
+        "Ambulance",
+        back_populates="routes"
+    )
+
+    hospital = relationship(
+        "Hospital",
+        back_populates="routes"
     )

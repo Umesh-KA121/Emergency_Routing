@@ -1,5 +1,5 @@
 from sqlalchemy import String
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database.connection import Base
 
@@ -7,7 +7,10 @@ from app.database.connection import Base
 class Ambulance(Base):
     __tablename__ = "ambulances"
 
-    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    id: Mapped[int] = mapped_column(
+        primary_key=True,
+        index=True
+    )
 
     vehicle_number: Mapped[str] = mapped_column(
         String(30),
@@ -22,4 +25,11 @@ class Ambulance(Base):
     latitude: Mapped[float]
     longitude: Mapped[float]
 
-    capacity: Mapped[int] = mapped_column(default=1)
+    capacity: Mapped[int] = mapped_column(
+        default=1
+    )
+
+    routes = relationship(
+        "Route",
+        back_populates="ambulance"
+    )

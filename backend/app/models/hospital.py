@@ -1,5 +1,5 @@
 from sqlalchemy import String
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database.connection import Base
 
@@ -7,7 +7,10 @@ from app.database.connection import Base
 class Hospital(Base):
     __tablename__ = "hospitals"
 
-    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    id: Mapped[int] = mapped_column(
+        primary_key=True,
+        index=True
+    )
 
     name: Mapped[str] = mapped_column(
         String(150)
@@ -27,4 +30,9 @@ class Hospital(Base):
     status: Mapped[str] = mapped_column(
         String(30),
         default="AVAILABLE"
+    )
+
+    routes = relationship(
+        "Route",
+        back_populates="hospital"
     )

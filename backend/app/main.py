@@ -1,9 +1,23 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.database.connection import engine, Base
-from app.models import User, Emergency, Ambulance, Hospital, Route
 
-from app.database.connection import engine
+from app.database.connection import engine, Base
+from app.models import (
+    User,
+    Emergency,
+    Ambulance,
+    Hospital,
+    Route
+)
+
+from app.routes.user import router as user_router
+from app.routes.emergency import router as emergency_router
+from app.routes.ambulance import router as ambulance_router
+from app.routes.hospital import router as hospital_router
+
+
+Base.metadata.create_all(bind=engine)
+
 
 app = FastAPI(
     title="Intelligent Emergency Response API",
@@ -11,7 +25,6 @@ app = FastAPI(
     version="0.1.0"
 )
 
-Base.metadata.create_all(bind=engine)
 
 app.add_middleware(
     CORSMiddleware,
@@ -20,6 +33,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+app.include_router(user_router)
+app.include_router(emergency_router)
+app.include_router(ambulance_router)
+app.include_router(hospital_router)
 
 
 @app.get("/")
@@ -40,7 +59,7 @@ def health_check():
 @app.get("/database-health")
 def database_health():
     try:
-        with engine.connect() as connection:
+        with engine.connect():
             return {
                 "database": "connected"
             }

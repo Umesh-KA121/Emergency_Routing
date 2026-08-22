@@ -25,51 +25,6 @@
 ## Week 2
 
 ### GitHub
-
-* [ ] Create GitHub repository
-* [ ] Clone repository locally
-* [ ] Configure Git
-* [ ] Add `.gitignore`
-* [ ] Add MIT License
-* [ ] Create initial README
-* [ ] Create project directory structure
-* [ ] Make initial commit
-* [ ] Push project to GitHub
-
-### Frontend
-
-* [ ] Initialize React + Vite
-* [ ] Verify development server
-* [ ] Create initial frontend structure
-
-### Backend
-
-* [ ] Initialize FastAPI project
-* [ ] Create Python virtual environment
-* [ ] Install backend dependencies
-* [ ] Create basic API
-* [ ] Verify API server
-
-### Database
-
-* [ ] Install/configure PostgreSQL
-* [ ] Create project database
-* [ ] Establish backend-database connection
-* [ ] Create initial database structure
-
-### Documentation
-
-* [ ] Create `docs/requirements/`
-* [ ] Create `docs/architecture/`
-* [ ] Create `docs/research/`
-* [ ] Create `docs/experiments/`
-* [ ] Document Week 2 progress
-
----
-
-## Week 2
-
-### GitHub
 - [x] Create GitHub repository
 - [x] Configure Git
 - [x] Add `.gitignore`
@@ -100,10 +55,21 @@
 - [x] Implement health check API
 
 ### Database
-- [ ] Install/configure PostgreSQL
-- [ ] Create project database
-- [ ] Establish backend-database connection
-- [ ] Create initial database structure
+
+- [x] Install/configure PostgreSQL
+- [x] Create project database
+- [x] Install SQLAlchemy
+- [x] Install PostgreSQL driver
+- [x] Configure environment variables
+- [x] Establish backend-database connection
+- [x] Design initial database schema
+- [x] Create User model
+- [x] Create Emergency model
+- [x] Create Ambulance model
+- [x] Create Hospital model
+- [x] Create Route model
+- [x] Create initial database tables
+- [ ] Add Alembic migrations
 
 ### Documentation
 - [x] Create documentation structure
