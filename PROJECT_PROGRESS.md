@@ -1,181 +1,163 @@
-# Project Progress
+# Emergency Response — Project Progress
 
-## Project
+## Overall Status
 
-**Intelligent Emergency Response & Ambulance Routing System**
-
----
-
-## Phase 1 — Planning
-
-### Week 1
-
-* [x] Identify real-world problem
-* [x] Define project idea
-* [x] Define objectives
-* [x] Identify DSA requirements
-* [x] Identify AI/ML requirements
-* [x] Select initial technology stack
-* [x] Define initial system workflow
+**Current Phase:** Phase 2 — Backend Foundation  
+**Current Status:** In Progress
 
 ---
 
-# Phase 2 — Project Foundation
+## Phase 1 — Planning & Architecture
 
-## Week 2
+### Status: COMPLETED
 
-### GitHub
-- [x] Create GitHub repository
-- [x] Configure Git
-- [x] Add `.gitignore`
-- [x] Add MIT License
-- [x] Create README
-- [x] Create project directory structure
-- [x] Make initial commit
-- [x] Push project to GitHub
-
-### Frontend
-- [x] Initialize React + Vite
-- [x] Install frontend dependencies
-- [x] Configure Tailwind CSS
-- [x] Create frontend structure
-- [x] Verify development server
-
-### Backend
-- [x] Initialize FastAPI project
-- [x] Create Python virtual environment
-- [x] Install backend dependencies
-- [x] Create basic API
-- [x] Verify API server
-
-### Frontend ↔ Backend
-- [x] Configure Axios
-- [x] Configure CORS
-- [x] Connect React with FastAPI
-- [x] Implement health check API
-
-### Database
-
-- [x] Install/configure PostgreSQL
-- [x] Create project database
-- [x] Install SQLAlchemy
-- [x] Install PostgreSQL driver
-- [x] Configure environment variables
-- [x] Establish backend-database connection
-- [x] Design initial database schema
-- [x] Create User model
-- [x] Create Emergency model
-- [x] Create Ambulance model
-- [x] Create Hospital model
-- [x] Create Route model
-- [x] Create initial database tables
-- [ ] Add Alembic migrations
-
-### Documentation
-- [x] Create documentation structure
-- [x] Initial README
-- [x] Project progress tracker
-- [ ] Document Week 2 implementation
-
-# Phase 3 — DSA Core
-
-## Week 3–4
-
-* [ ] Design road network graph
-* [ ] Implement adjacency list
-* [ ] Implement BFS
-* [ ] Implement DFS
-* [ ] Implement Priority Queue
-* [ ] Implement Dijkstra
-* [ ] Implement A*
-* [ ] Implement ambulance selection
-* [ ] Write algorithm tests
-* [ ] Record complexity analysis
+- [x] Project idea finalized
+- [x] Problem statement defined
+- [x] Objectives defined
+- [x] Functional requirements identified
+- [x] Non-functional requirements identified
+- [x] Technology stack finalized
+- [x] High-level system architecture planned
+- [x] DSA and AI/ML roles defined
 
 ---
 
-# Phase 4 — AI/ML
+## Phase 2 — Backend Foundation
 
-## Week 5–7
+### Status: IN PROGRESS
 
-* [ ] Identify datasets
-* [ ] Data preprocessing
-* [ ] EDA
-* [ ] Feature engineering
-* [ ] Emergency severity model
-* [ ] Traffic prediction model
-* [ ] ETA prediction model
-* [ ] Model comparison
-* [ ] Save trained models
-* [ ] Document experiments
+### Environment & Project Setup
 
----
+- [x] Backend project structure created
+- [x] Python virtual environment configured
+- [x] FastAPI configured
+- [x] Linter/configuration setup
+- [x] PostgreSQL configured
+- [x] SQLAlchemy configured
+- [x] Database connection verified
+- [x] Alembic configured
+- [x] Initial migrations applied successfully
 
-# Phase 5 — DSA + ML Integration
+### Database Models
 
-## Week 8–9
+- [x] User model
+- [x] Emergency model
+- [x] Ambulance model
+- [x] Hospital model
+- [x] Route model — schema/model exists but routing logic is not implemented yet
+- [x] SQLAlchemy relationships configured
 
-* [ ] Integrate severity prediction
-* [ ] Generate emergency priority score
-* [ ] Integrate priority queue
-* [ ] Integrate traffic prediction
-* [ ] Update graph edge weights
-* [ ] Integrate A*
-* [ ] Integrate ambulance selection
-* [ ] Test complete emergency workflow
+### Pydantic Schemas
 
----
+- [x] User schemas
+- [x] Emergency schemas
+- [x] Ambulance schemas
+- [x] Hospital schemas
+- [x] Route schemas
 
-# Phase 6 — Application Development
+### REST APIs
 
-## Week 10–12
+- [x] User API
+- [x] Emergency API
+- [x] Ambulance API
+- [x] Hospital API
+- [ ] Route API — not implemented/verified yet
 
-* [ ] Authentication
-* [ ] Emergency reporting
-* [ ] Dispatcher dashboard
-* [ ] Ambulance management
-* [ ] Hospital management
-* [ ] Interactive map
-* [ ] Route visualization
-* [ ] Emergency tracking
-* [ ] Analytics dashboard
+### API Testing
 
----
+- [x] Swagger documentation
+- [x] User API testing
+- [x] Emergency API testing
+- [x] Ambulance API testing
+- [x] Hospital API testing
+- [ ] Route API testing
 
-# Phase 7 — Testing & Optimization
+### Database Migration
 
-## Week 13–14
-
-* [ ] Unit testing
-* [ ] API testing
-* [ ] Integration testing
-* [ ] ML testing
-* [ ] Dijkstra vs A* benchmark
-* [ ] Performance optimization
-* [ ] Security testing
-* [ ] Bug fixing
+- [x] Alembic migration workflow verified
+- [x] Database schema synchronized with SQLAlchemy models
 
 ---
 
-# Phase 8 — Finalization
+## Phase 3 — DSA Core
 
-## Week 15–16
+### Status: NOT STARTED
 
-* [ ] Deployment
-* [ ] Final README
-* [ ] Final documentation
-* [ ] Final report
-* [ ] Results and graphs
-* [ ] Presentation
-* [ ] Demo video
-* [ ] Final GitHub cleanup
+Planned components:
+
+- [ ] Road network graph
+- [ ] Adjacency list
+- [ ] Priority queue
+- [ ] Emergency prioritization
+- [ ] Dijkstra's algorithm
+- [ ] A* algorithm
+- [ ] Ambulance selection
+- [ ] Hospital selection
+- [ ] DSA performance comparison
 
 ---
 
-## Current Status
+## Phase 4 — AI/ML
 
-**Current Phase:** Phase 2 — Project Foundation
+### Status: NOT STARTED
 
-**Current Week:** Week 2
+Planned components:
 
-**Current Focus:** GitHub, project structure, frontend/backend/database setup and documentation.
+- [ ] Dataset preparation
+- [ ] Data preprocessing
+- [ ] Emergency severity prediction
+- [ ] ETA prediction
+- [ ] Model evaluation
+- [ ] Model integration with backend
+
+---
+
+## Phase 5 — Frontend
+
+### Status: NOT STARTED
+
+- [ ] Emergency reporting interface
+- [ ] User dashboard
+- [ ] Ambulance dashboard
+- [ ] Hospital dashboard
+- [ ] Emergency status tracking
+- [ ] Route visualization
+
+---
+
+## Phase 6 — System Integration
+
+### Status: NOT STARTED
+
+- [ ] DSA integration
+- [ ] ML integration
+- [ ] Backend/frontend integration
+- [ ] Real-time emergency updates
+- [ ] End-to-end emergency workflow
+
+---
+
+## Phase 7 — Testing & Documentation
+
+### Status: NOT STARTED
+
+- [ ] Unit testing
+- [ ] API testing
+- [ ] DSA testing
+- [ ] ML evaluation
+- [ ] Integration testing
+- [ ] Performance testing
+- [ ] Final report
+
+---
+
+## Phase 8 — Deployment & Presentation
+
+### Status: NOT STARTED
+
+- [ ] Dockerization
+- [ ] Production configuration
+- [ ] Deployment
+- [ ] GitHub final cleanup
+- [ ] Project demonstration
+- [ ] Final presentation
