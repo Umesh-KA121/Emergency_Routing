@@ -1,6 +1,5 @@
-import heapq
-
 from app.services.dsa.graph import Graph
+from app.services.dsa.priority_queue import PriorityQueue
 
 
 def dijkstra(graph: Graph, start, destination):
@@ -31,14 +30,18 @@ def dijkstra(graph: Graph, start, destination):
 
     distances[start] = 0
 
-    priority_queue = [(0, start)]
+    priority_queue = PriorityQueue()
+    priority_queue.push(0, start)
 
-    while priority_queue:
-        current_distance, current_node = heapq.heappop(priority_queue)
+    while not priority_queue.is_empty():
 
+        current_distance, current_node = priority_queue.pop()
+
+        # Ignore outdated entries.
         if current_distance > distances[current_node]:
             continue
 
+        # Destination reached with shortest known distance.
         if current_node == destination:
             break
 
@@ -50,10 +53,7 @@ def dijkstra(graph: Graph, start, destination):
                 distances[neighbor] = distance
                 previous[neighbor] = current_node
 
-                heapq.heappush(
-                    priority_queue,
-                    (distance, neighbor)
-                )
+                priority_queue.push(distance, neighbor)
 
     if distances[destination] == float("inf"):
         return float("inf"), []
