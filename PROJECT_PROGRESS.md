@@ -81,20 +81,17 @@
 
 ## Phase 3 — DSA Core
 
-### Status: NOT STARTED
+### Status: IN PROGRESS
 
-Planned components:
-
-- [ ] Road network graph
-- [ ] Adjacency list
-- [ ] Priority queue
+- [x] Road network graph
+- [x] Adjacency list
+- [x] Priority queue
 - [ ] Emergency prioritization
-- [ ] Dijkstra's algorithm
+- [x] Dijkstra's algorithm
 - [ ] A* algorithm
 - [ ] Ambulance selection
 - [ ] Hospital selection
 - [ ] DSA performance comparison
-
 ---
 
 ## Phase 4 — AI/ML
