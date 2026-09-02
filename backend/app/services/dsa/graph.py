@@ -5,11 +5,17 @@ class Graph:
 
     def __init__(self):
         self.graph = {}
+        self.coordinates = {}
 
-    def add_node(self, node):
-        """Add a node if it does not already exist."""
+    def add_node(self, node, latitude=None, longitude=None):
+        """Add a node and optionally store its coordinates."""
+
         if node not in self.graph:
             self.graph[node] = []
+
+        if latitude is not None and longitude is not None:
+            self.coordinates[node] = (latitude, longitude)
+
     def add_edge(self, source, destination, weight, bidirectional=True):
         """Add a weighted edge to the graph."""
 
@@ -26,8 +32,15 @@ class Graph:
 
     def get_neighbors(self, node):
         """Return neighboring nodes and their edge weights."""
+
         return self.graph.get(node, [])
 
     def get_nodes(self):
         """Return all nodes in the graph."""
+
         return list(self.graph.keys())
+
+    def get_coordinates(self, node):
+        """Return coordinates for a node."""
+
+        return self.coordinates.get(node)

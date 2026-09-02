@@ -37,3 +37,10 @@ def test_negative_weight_rejected():
 
     with pytest.raises(ValueError):
         graph.add_edge("A", "B", -5)
+
+def test_node_coordinates():
+    graph = Graph()
+
+    graph.add_node("A", 31.6340, 74.8723)
+
+    assert graph.get_coordinates("A") == (31.6340, 74.8723)
